@@ -1,0 +1,19 @@
+inqueue.pythonanywhere.com
+3b1cbddda9872dd1aa06e54670871f4e879f8efa
+
+#Using the token
+import requests
+my_domain = 'inqueue.pythonanywhere.com'
+username = 'inqueue'
+token = '3b1cbddda9872dd1aa06e54670871f4e879f8efa'
+
+response = requests.post(
+    'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
+        username=username, domain=my_domain
+    ),
+    headers={'Authorization': 'Token {token}'.format(token=token)}
+)
+if response.status_code == 200:
+    print('All OK')
+else:
+    print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
