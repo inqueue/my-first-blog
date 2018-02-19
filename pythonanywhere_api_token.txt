@@ -1,11 +1,11 @@
 inqueue.pythonanywhere.com
-3b1cbddda9872dd1aa06e54670871f4e879f8efa
+eb7749b3bced6fcb0ffd1bffabbc6ce232810e57
 
 #Using the token
 import requests
 my_domain = 'inqueue.pythonanywhere.com'
 username = 'inqueue'
-token = '3b1cbddda9872dd1aa06e54670871f4e879f8efa'
+token = 'eb7749b3bced6fcb0ffd1bffabbc6ce232810e57'
 
 response = requests.post(
     'https://www.pythonanywhere.com/api/v0/user/{username}/webapps/{domain}/reload/'.format(
